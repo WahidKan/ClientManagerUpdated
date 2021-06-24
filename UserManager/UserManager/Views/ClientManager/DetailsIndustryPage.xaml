@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserManager.Views.ClientManager.DetailsIndustryPage">
+    <ContentPage.Content>
+        <StackLayout Margin="40,20">
+            <Label Text="Details Industry" FontSize="Large" Margin="0,20"/>
+            <Grid Margin="10,20" BackgroundColor="AliceBlue">
+                <Label Text="Industry Name : " Grid.Row="0" Grid.Column="0"/>
+                <!--<Label x:Name="IndustryNameEdit"/>-->
+                <Label x:Name="IndustryNameEdit"  Text="Test" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

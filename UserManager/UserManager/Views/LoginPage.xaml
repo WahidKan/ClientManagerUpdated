@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UserManager.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+
+
+    <StackLayout VerticalOptions="Center" Margin="35,0">
+        <Image Source="glogo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="CManager" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+
+        <Entry x:Name="emailEntry"
+               Placeholder="Email Id"
+               Keyboard="Email"
+               Text="Test"/>
+        <Entry x:Name="passwordEntry" 
+               Placeholder="Password"
+               IsPassword="True"
+               Text="pass"/>
+        <Button x:Name="LoginButton"
+                Text="LOGIN" 
+                Clicked="LoginButton_Clicked"
+                Margin="0,50,0,0"/>
+    </StackLayout>
+
+</ContentPage>

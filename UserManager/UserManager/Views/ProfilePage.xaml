@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserManager.Views.ProfilePage"
+             >
+    <ScrollView>
+
+        <StackLayout>
+
+        <!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Profile Picture" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        </Frame>-->
+        <Label Text="Profile Picture" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+
+
+        <StackLayout>
+            <Image x:Name="resultImage" Aspect="AspectFill" HeightRequest="250" WidthRequest="250" Margin="10,10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+
+            <Grid Margin="30,0,30,0">
+                <Button Grid.Row="0" Grid.Column="0" Text="Pick Image" Clicked="Button_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Take Image" Clicked="Button1_Clicked"  />
+            </Grid>
+        </StackLayout>
+
+
+            <StackLayout Margin="20,20">
+                <Label Text="Account Information" FontSize="20"/>
+                <Label></Label>
+
+                <Grid >
+
+
+                    <Label Grid.Column="0" Grid.Row="0" Text="UserName : "/>
+                    <!--<Entry Grid.Column="1" Grid.Row="0" x:Name="userName" Placeholder="username"/>-->
+                    <Label Grid.Column="1" Grid.Row="0" x:Name="userNameLabel"/>
+
+                    <Label Grid.Column="0" Grid.Row="1" Text="First Name : "/>
+                    <!--<Entry Grid.Column="1" Grid.Row="1" x:Name="firstName" Placeholder="First Name"/>-->
+                    <Label Grid.Column="1" Grid.Row="1" x:Name="firstNameLabel"/>
+
+
+                    <Label Grid.Column="0" Grid.Row="2" Text="Last Name : "/>
+                    <!--<Entry Grid.Column="1" Grid.Row="2" x:Name="lastName" Placeholder="Last Name"/>-->
+                    <Label Grid.Column="1" Grid.Row="2" x:Name="lastNameLabel"/>
+
+
+                    <Label Grid.Column="0" Grid.Row="3" Text="Email : "/>
+                    <!--<Entry Grid.Column="1" Grid.Row="3" x:Name="email" Placeholder="email@gmail.com"/>-->
+                    <Label Grid.Column="1" Grid.Row="3" x:Name="emailLabel"/>
+
+                </Grid>
+            </StackLayout>
+            <StackLayout Margin="20,20">
+                <Button Text="Edit" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+
+            <!--<ListView x:Name="userListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding User}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

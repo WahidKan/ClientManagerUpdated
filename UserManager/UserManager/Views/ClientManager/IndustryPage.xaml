@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:local="clr-namespace:UserManager.Views"
+             xmlns:vmModel="clr-namespace:UserManager.ViewModels" 
+             xmlns:telerikCommon="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls" xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             x:Class="UserManager.Views.ClientManager.IndustryPage">
+    
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.BindingContext>
+        <vmModel:IndustryViewModel />
+    </ContentPage.BindingContext>
+
+    <!--<ContentPage.BindingContext>
+        <local:IndustryPage />
+    </ContentPage.BindingContext>-->
+
+    <ContentPage.Content>
+
+        <StackLayout Margin="0,100,0,20">
+            <StackLayout Margin="0,20">
+                <Grid Margin="0,0,20,0" MinimumHeightRequest="100">
+                    <Button Text="Refresh" Clicked="RefreshButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="2" MinimumWidthRequest="120" MinimumHeightRequest="50" HeightRequest="40"/>
+                    <Button Text="Details" Clicked="DetailsButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="3" MinimumWidthRequest="120" MinimumHeightRequest="50" HeightRequest="40"/>
+                    <Button Text="Edit" Clicked="EditButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="4" MinimumWidthRequest="120" MinimumHeightRequest="50" HeightRequest="40"/>
+                    <Button Text="Add" Clicked="AddButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="5" MinimumWidthRequest="120" HeightRequest="40" />
+                </Grid>
+            </StackLayout>
+
+
+            <ScrollView>
+               
+                    <syncfusion:SfDataGrid x:Name="DataGrid" />
+             
+                <!--<telerikGrid:RadDataGrid x:Name="DataGrid" 
+                                         ItemsSource="{Binding Industries}" 
+                                         AutoGenerateColumns="False" 
+                                         SelectedItem="{Binding selectedItems}">
+
+                    <telerikGrid:RadDataGrid.Columns>
+
+                        <telerikGrid:DataGridNumericalColumn PropertyName="ID"
+                                                             SizeMode="Fixed" 
+                                                             HeaderText="ID">
+
+                        </telerikGrid:DataGridNumericalColumn>
+
+                        <telerikGrid:DataGridTextColumn PropertyName="Industry_Name" 
+                                                        HeaderText="Industry Name"/>
+
+
+                        --><!--<telerikGrid:DataGridTemplateColumn HeaderText="Action">
+                            <telerikGrid:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <telerikInput:RadButton Text="Edit" 
+                                                                BackgroundColor="DodgerBlue" 
+                                                                TextColor="White" 
+                                                                WidthRequest="40" 
+                                                                HeightRequest="30" 
+                                                                Margin="20,5,20,5"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </telerikGrid:DataGridColumn.CellContentTemplate>
+                        </telerikGrid:DataGridTemplateColumn>--><!--
+                    </telerikGrid:RadDataGrid.Columns>
+                </telerikGrid:RadDataGrid>-->
+            </ScrollView>
+
+
+
+            <!--<Button Text="Edit2" Command="{Binding EditCommand}"/>-->
+        </StackLayout>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

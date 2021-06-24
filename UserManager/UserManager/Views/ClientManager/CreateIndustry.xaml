@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserManager.Views.ClientManager.CreateIndustry">
+    <ContentPage.Content>
+        <StackLayout Margin="40,20">
+            <Label Text="Add New Industry" FontSize="Large" Margin="0,20"/>
+            <Grid Margin="10,20" BackgroundColor="AliceBlue">
+                <Label Text="Industry Name : " Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="industryName" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            
+            <Button Text="Create" Clicked="Create_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

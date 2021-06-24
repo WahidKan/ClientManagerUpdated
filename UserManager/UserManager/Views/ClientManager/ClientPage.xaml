@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:local="clr-namespace:UserManager.ViewModels" 
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             x:Class="UserManager.Views.ClientManager.ClientPage">
+    <ContentPage.BindingContext>
+        <local:ClientViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="0,100,0,20">
+            <StackLayout Margin="0,20">
+                <Grid Margin="0,0,20,0" MinimumHeightRequest="100">
+                    <Button Text="Details" Clicked="DetailsButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="3" WidthRequest="120" MinimumHeightRequest="50" HeightRequest="40"/>
+                    <Button Text="Edit" Clicked="EditButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="4" WidthRequest="120" HeightRequest="40" />
+                <Button Text="Add" Clicked="AddButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="5" WidthRequest="120" HeightRequest="40"/>
+            </Grid>
+            </StackLayout>
+
+            
+            <ScrollView>
+                <telerikGrid:RadDataGrid x:Name="dataGrid" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" >
+                    <telerikGrid:RadDataGrid.Columns>
+                        <telerikGrid:DataGridNumericalColumn PropertyName="ID" SizeMode="Fixed" HeaderText="ID"/>
+                        <telerikGrid:DataGridNumericalColumn PropertyName="Industry_ID" SizeMode="Fixed" HeaderText="Industry ID"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="Client_Name" HeaderText="Client Name"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="Client_Address" HeaderText="Address"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="City" HeaderText="City"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="Country" HeaderText="Country"/>
+                        <telerikGrid:DataGridNumericalColumn PropertyName="Contact_Number" SizeMode="Fixed" HeaderText="Phone"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="Email" HeaderText="Email"/>
+
+                        <!--<telerikGrid:DataGridTemplateColumn HeaderText="Edit">
+                            <telerikGrid:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <telerikInput:RadButton Text="Edit" BackgroundColor="DodgerBlue" TextColor="White" WidthRequest="40" HeightRequest="30" Margin="20,5,20,5"/>
+
+                                    </StackLayout>
+                                </DataTemplate>
+                            </telerikGrid:DataGridColumn.CellContentTemplate>
+
+
+                        </telerikGrid:DataGridTemplateColumn>-->
+
+                    </telerikGrid:RadDataGrid.Columns>
+
+
+                </telerikGrid:RadDataGrid>
+
+            </ScrollView>
+            
+
+            <!--<Button Text="Edit2" Command="{Binding EditCommand}"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserManager.Views.ClientManager.DetailsClientPage">
+    <ContentPage.Content>
+        <StackLayout Margin="40,20">
+            <Label Text="Details Client" FontSize="Large" Margin="0,20"/>
+            <Grid Margin="10,20" BackgroundColor="AliceBlue">
+
+                <Label Text="Industry ID : " Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="industryId" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Client Name : " Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="clientName" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Client Address : " Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="address" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="City : " Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="city" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Country : " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="country" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Contact Number : " Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="contact_number" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Email : " Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Label x:Name="email" Grid.Row="6" Grid.Column="1"/>
+
+
+            </Grid>
+
+            <!--<Button Text="Update" Clicked="Update_Clicked" Margin="40"></Button>-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

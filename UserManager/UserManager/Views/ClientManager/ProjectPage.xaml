@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:local="clr-namespace:UserManager.ViewModels"
+             x:Class="UserManager.Views.ClientManager.ProjectPage">
+
+    <ContentPage.BindingContext>
+        <local:ProjectViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="0,100,0,20">
+                <StackLayout Margin="0,20">
+                <Grid Margin="0,0,20,0" MinimumHeightRequest="100">
+                    <Button Text="Details" Clicked="DetailsButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="3" WidthRequest="120" MinimumHeightRequest="50" HeightRequest="40"/>
+                    <Button Text="Edit" Clicked="EditButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="4" WidthRequest="120" HeightRequest="40" />
+                <Button Text="Add" Clicked="AddButton_Clicked" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="5" WidthRequest="120" HeightRequest="40"/>
+                </Grid>
+
+            </StackLayout>
+
+            <ScrollView>
+                <telerikGrid:RadDataGrid x:Name="dataGrid" ItemsSource="{Binding Projects}" AutoGenerateColumns="False" >
+                    <telerikGrid:RadDataGrid.Columns>
+                        <telerikGrid:DataGridNumericalColumn PropertyName="ID" SizeMode="Fixed" HeaderText="ID"/>
+                        <telerikGrid:DataGridNumericalColumn PropertyName="Client_ID" SizeMode="Fixed" HeaderText="Client ID"/>
+                        <telerikGrid:DataGridTextColumn PropertyName="Project_Name" HeaderText="Project Name"/>
+                        <!--<telerikGrid:DataGridTemplateColumn HeaderText="Edit">
+                            <telerikGrid:DataGridColumn.CellContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Button Text="Edit" Command="{Binding EditCommand}" BindingContext=""/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </telerikGrid:DataGridColumn.CellContentTemplate>
+
+
+                        </telerikGrid:DataGridTemplateColumn>-->
+
+                    </telerikGrid:RadDataGrid.Columns>
+                </telerikGrid:RadDataGrid>
+            </ScrollView>
+
+
+
+            <!--<Button Text="Edit2" Command="{Binding EditCommand}"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

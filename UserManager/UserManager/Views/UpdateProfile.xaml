@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserManager.Views.UpdateProfile">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20">
+            <Label Text="Account Information" FontSize="20"/>
+            <Label></Label>
+
+            <Grid >
+                <Label Grid.Column="0" Grid.Row="0" Text="UserName : "/>
+                <Entry Grid.Column="1" Grid.Row="0" x:Name="userName" Placeholder="username" Text="test" IsReadOnly="True"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="First Name : "/>
+                <Entry Grid.Column="1" Grid.Row="1" x:Name="firstName" Placeholder="First Name"/>
+
+                <Label Grid.Column="0" Grid.Row="2" Text="Last Name : "/>
+                <Entry Grid.Column="1" Grid.Row="2" x:Name="lastName" Placeholder="Last Name"/>
+
+                <Label Grid.Column="0" Grid.Row="3" Text="Email : "/>
+                <Entry Grid.Column="1" Grid.Row="3" x:Name="email" Placeholder="email@gmail.com"/>
+            </Grid>
+            
+            <Button Text="Submit" Clicked="Button_Clicked"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
